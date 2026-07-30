@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Finding Joy">
+  <rect width="64" height="64" fill="#FAF7F0"/>
+  <!-- lowercase serif 'j' echoing the cover title type -->
+  <text x="32" y="47" text-anchor="middle"
+        font-family="Playfair Display, Cormorant Garamond, Georgia, serif"
+        font-size="52" font-style="italic" fill="#A3A62E">j</text>
+</svg>
