@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>News — the Finding Joy series | Arjun Jain</title>
-  <meta name="description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
-  <link rel="canonical" href="https://findingjoyseries.com/news.html">
+  <title>FAQ — the Finding Joy series | Arjun Jain</title>
+  <meta name="description" content="Frequently asked questions about the Finding Joy series: release, reading order, formats, samples, and press.">
+  <link rel="canonical" href="https://findingjoyseries.com/faq.html">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Finding Joy">
-  <meta property="og:title" content="News — the Finding Joy series">
-  <meta property="og:description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
-  <meta property="og:url" content="https://findingjoyseries.com/news.html">
+  <meta property="og:title" content="FAQ — the Finding Joy series | Arjun Jain">
+  <meta property="og:description" content="Frequently asked questions about the Finding Joy series: release, reading order, formats, samples, and press.">
+  <meta property="og:url" content="https://findingjoyseries.com/faq.html">
   <meta property="og:image" content="https://findingjoyseries.com/assets/covers/finding-joy.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="News — the Finding Joy series">
-  <meta name="twitter:description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
+  <meta name="twitter:title" content="FAQ — the Finding Joy series | Arjun Jain">
+  <meta name="twitter:description" content="Frequently asked questions about the Finding Joy series: release, reading order, formats, samples, and press.">
   <meta name="twitter:image" content="https://findingjoyseries.com/assets/covers/finding-joy.jpg">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -55,7 +55,7 @@
             <ul class="nav__menu">
               <li><a href="reading-guide.html">Reading Guide</a></li>
               <li><a href="educators.html">For Educators</a></li>
-              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="faq.html" aria-current="page">FAQ</a></li>
             </ul>
           </li>
           <li class="nav__item"><a class="nav__link" href="praise.html">Praise</a></li>
@@ -63,7 +63,7 @@
           <li class="nav__item nav__item--has-menu">
             <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">News</button>
             <ul class="nav__menu">
-              <li><a href="news.html" aria-current="page">Latest News</a></li>
+              <li><a href="news.html">Latest News</a></li>
               <li><a href="events.html">Events</a></li>
             </ul>
           </li>
@@ -99,7 +99,7 @@
         <ul class="mobile-menu__sub">
           <li><a href="reading-guide.html">Reading Guide</a></li>
           <li><a href="educators.html">For Educators</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="faq.html" aria-current="page">FAQ</a></li>
         </ul>
       </li>
       <li><a class="mobile-menu__link" href="praise.html">Praise</a></li>
@@ -107,7 +107,7 @@
       <li>
         <span class="mobile-menu__link" aria-hidden="true">News</span>
         <ul class="mobile-menu__sub">
-          <li><a href="news.html" aria-current="page">Latest News</a></li>
+          <li><a href="news.html">Latest News</a></li>
           <li><a href="events.html">Events</a></li>
         </ul>
       </li>
@@ -118,24 +118,31 @@
   <main id="main">
     <header class="page-head wrap">
       <p class="series-line">The <em>Finding Joy</em> series</p>
-      <h1 class="page-head__title"><span class="key">news</span> &amp; updates</h1>
-      <p class="page-head__intro">Release announcements and milestones, newest first.</p>
+      <h1 class="page-head__title">frequently asked <span class="key">questions</span></h1>
+      <p class="page-head__intro">Answers about the books, release, reading order, and more.</p>
     </header>
 
     <section class="section section--tight wrap">
-      <!-- News items render from data/news.js (newest first).
-           The item below is a no-JS fallback the script replaces. -->
-      <ul class="news-list" data-news>
-        <li class="news-item">
-          <div class="news-item__date"><time datetime="2026-07-30">July 30, 2026</time></div>
-          <h2 class="news-item__title">All three books are coming soon</h2>
-          <p class="news-item__body">All three books in the Finding Joy series are coming soon. Sign up for release announcements to be the first to know when they arrive.</p>
-        </li>
-      </ul>
+      <!-- Renders from data/faq.js; the items below are a no-JS fallback. -->
+      <div class="qa reveal" data-faq>
+        <details class="qa__item">
+          <summary class="qa__q">When do the books come out?</summary>
+          <div class="qa__a"><p>All three books are coming soon; dates haven't been announced. Sign up on the home page to hear first.</p></div>
+        </details>
+        <details class="qa__item">
+          <summary class="qa__q">What order should I read them in?</summary>
+          <div class="qa__a"><p>Series order: finding joy, then recovering connection, then home stretch.</p></div>
+        </details>
+        <details class="qa__item">
+          <summary class="qa__q">Can I read a sample first?</summary>
+          <div class="qa__a"><p>Yes — a full sample chapter from Book 1 is on the Preview page.</p></div>
+        </details>
+      </div>
+    </section>
 
-      <p class="center" style="margin-top:3rem;">
-        <a class="btn btn--olive" href="index.html#newsletter-heading">Sign up for announcements</a>
-      </p>
+    <section class="section--tight wrap center" style="padding-bottom:var(--section-y);">
+      <p class="lead" style="margin-bottom:1.5rem;">Still curious?</p>
+      <a class="btn btn--olive" href="contact.html">Get in touch</a>
     </section>
   </main>
 
@@ -180,7 +187,8 @@
     </div>
   </footer>
 
-  <script src="data/news.js"></script>
+  <script src="data/faq.js"></script>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>News — the Finding Joy series | Arjun Jain</title>
-  <meta name="description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
-  <link rel="canonical" href="https://findingjoyseries.com/news.html">
+  <title>Characters — the Finding Joy series | Arjun Jain</title>
+  <meta name="description" content="Meet the characters of the Finding Joy series — Laleh, her sister Farah, brother Ahmed, her parents, and her rival Sinclair.">
+  <link rel="canonical" href="https://findingjoyseries.com/characters.html">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Finding Joy">
-  <meta property="og:title" content="News — the Finding Joy series">
-  <meta property="og:description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
-  <meta property="og:url" content="https://findingjoyseries.com/news.html">
+  <meta property="og:title" content="Characters — the Finding Joy series | Arjun Jain">
+  <meta property="og:description" content="Meet the characters of the Finding Joy series — Laleh, her sister Farah, brother Ahmed, her parents, and her rival Sinclair.">
+  <meta property="og:url" content="https://findingjoyseries.com/characters.html">
   <meta property="og:image" content="https://findingjoyseries.com/assets/covers/finding-joy.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="News — the Finding Joy series">
-  <meta name="twitter:description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
+  <meta name="twitter:title" content="Characters — the Finding Joy series | Arjun Jain">
+  <meta name="twitter:description" content="Meet the characters of the Finding Joy series — Laleh, her sister Farah, brother Ahmed, her parents, and her rival Sinclair.">
   <meta name="twitter:image" content="https://findingjoyseries.com/assets/covers/finding-joy.jpg">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -46,7 +46,7 @@
             <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">The Series</button>
             <ul class="nav__menu">
               <li><a href="story.html">The Story</a></li>
-              <li><a href="characters.html">Characters</a></li>
+              <li><a href="characters.html" aria-current="page">Characters</a></li>
               <li><a href="sample-chapter.html">Preview</a></li>
             </ul>
           </li>
@@ -63,7 +63,7 @@
           <li class="nav__item nav__item--has-menu">
             <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">News</button>
             <ul class="nav__menu">
-              <li><a href="news.html" aria-current="page">Latest News</a></li>
+              <li><a href="news.html">Latest News</a></li>
               <li><a href="events.html">Events</a></li>
             </ul>
           </li>
@@ -90,7 +90,7 @@
         <span class="mobile-menu__link" aria-hidden="true">The Series</span>
         <ul class="mobile-menu__sub">
           <li><a href="story.html">The Story</a></li>
-          <li><a href="characters.html">Characters</a></li>
+          <li><a href="characters.html" aria-current="page">Characters</a></li>
           <li><a href="sample-chapter.html">Preview</a></li>
         </ul>
       </li>
@@ -107,7 +107,7 @@
       <li>
         <span class="mobile-menu__link" aria-hidden="true">News</span>
         <ul class="mobile-menu__sub">
-          <li><a href="news.html" aria-current="page">Latest News</a></li>
+          <li><a href="news.html">Latest News</a></li>
           <li><a href="events.html">Events</a></li>
         </ul>
       </li>
@@ -118,24 +118,52 @@
   <main id="main">
     <header class="page-head wrap">
       <p class="series-line">The <em>Finding Joy</em> series</p>
-      <h1 class="page-head__title"><span class="key">news</span> &amp; updates</h1>
-      <p class="page-head__intro">Release announcements and milestones, newest first.</p>
+      <h1 class="page-head__title"><span class="key">characters</span></h1>
+      <p class="page-head__intro">The people at the heart of the series — the family Laleh carries and the rival she faces.</p>
     </header>
 
     <section class="section section--tight wrap">
-      <!-- News items render from data/news.js (newest first).
-           The item below is a no-JS fallback the script replaces. -->
-      <ul class="news-list" data-news>
-        <li class="news-item">
-          <div class="news-item__date"><time datetime="2026-07-30">July 30, 2026</time></div>
-          <h2 class="news-item__title">All three books are coming soon</h2>
-          <p class="news-item__body">All three books in the Finding Joy series are coming soon. Sign up for release announcements to be the first to know when they arrive.</p>
-        </li>
-      </ul>
+      <!-- Renders from data/characters.js; the cards below are a no-JS fallback. -->
+      <div class="character-grid reveal" data-characters>
+        <article class="character">
+          <div class="character__initial" aria-hidden="true">L</div>
+          <h2 class="character__name">Laleh</h2>
+          <p class="character__role">The narrator</p>
+          <p class="character__blurb">A girl who learns tennis in secret under Taliban rule and refuses to let go of it.</p>
+        </article>
+        <article class="character">
+          <div class="character__initial" aria-hidden="true">F</div>
+          <h2 class="character__name">Farah</h2>
+          <p class="character__role">Laleh's sister</p>
+          <p class="character__blurb">The steady voice from home that reaches Laleh at match point.</p>
+        </article>
+        <article class="character">
+          <div class="character__initial" aria-hidden="true">A</div>
+          <h2 class="character__name">Ahmed</h2>
+          <p class="character__role">Laleh's brother</p>
+          <p class="character__blurb">The easy warmth of a family under pressure.</p>
+        </article>
+        <article class="character">
+          <div class="character__initial" aria-hidden="true">M</div>
+          <h2 class="character__name">Mādar & Pādar</h2>
+          <p class="character__role">Laleh's parents</p>
+          <p class="character__blurb">The reasons for every risk and every return.</p>
+        </article>
+        <article class="character">
+          <div class="character__initial" aria-hidden="true">S</div>
+          <h2 class="character__name">Sinclair</h2>
+          <p class="character__role">The rival</p>
+          <p class="character__blurb">The opponent in the fight of Laleh's life.</p>
+        </article>
+      </div>
+    </section>
 
-      <p class="center" style="margin-top:3rem;">
-        <a class="btn btn--olive" href="index.html#newsletter-heading">Sign up for announcements</a>
-      </p>
+    <section class="band section--tight">
+      <div class="wrap">
+        <p class="band__title">one story, in three <span class="key">sets</span></p>
+        <p class="lead" style="margin-top:1rem;">Follow Laleh from a hidden court in Kabul to the professional stage.</p>
+        <p style="margin-top:1.5rem;"><a class="btn btn--olive" href="story.html">Read the story</a></p>
+      </div>
     </section>
   </main>
 
@@ -180,7 +208,8 @@
     </div>
   </footer>
 
-  <script src="data/news.js"></script>
+  <script src="data/characters.js"></script>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>

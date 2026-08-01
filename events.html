@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>News — the Finding Joy series | Arjun Jain</title>
-  <meta name="description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
-  <link rel="canonical" href="https://findingjoyseries.com/news.html">
+  <title>Events — the Finding Joy series | Arjun Jain</title>
+  <meta name="description" content="Readings, signings, and appearances for the Finding Joy series by Arjun Jain.">
+  <link rel="canonical" href="https://findingjoyseries.com/events.html">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Finding Joy">
-  <meta property="og:title" content="News — the Finding Joy series">
-  <meta property="og:description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
-  <meta property="og:url" content="https://findingjoyseries.com/news.html">
+  <meta property="og:title" content="Events — the Finding Joy series | Arjun Jain">
+  <meta property="og:description" content="Readings, signings, and appearances for the Finding Joy series by Arjun Jain.">
+  <meta property="og:url" content="https://findingjoyseries.com/events.html">
   <meta property="og:image" content="https://findingjoyseries.com/assets/covers/finding-joy.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="News — the Finding Joy series">
-  <meta name="twitter:description" content="Latest news and release updates for the Finding Joy series by Arjun Jain.">
+  <meta name="twitter:title" content="Events — the Finding Joy series | Arjun Jain">
+  <meta name="twitter:description" content="Readings, signings, and appearances for the Finding Joy series by Arjun Jain.">
   <meta name="twitter:image" content="https://findingjoyseries.com/assets/covers/finding-joy.jpg">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -63,8 +63,8 @@
           <li class="nav__item nav__item--has-menu">
             <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">News</button>
             <ul class="nav__menu">
-              <li><a href="news.html" aria-current="page">Latest News</a></li>
-              <li><a href="events.html">Events</a></li>
+              <li><a href="news.html">Latest News</a></li>
+              <li><a href="events.html" aria-current="page">Events</a></li>
             </ul>
           </li>
         </ul>
@@ -107,8 +107,8 @@
       <li>
         <span class="mobile-menu__link" aria-hidden="true">News</span>
         <ul class="mobile-menu__sub">
-          <li><a href="news.html" aria-current="page">Latest News</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">Latest News</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
         </ul>
       </li>
       <li><a class="mobile-menu__link" href="contact.html">Contact</a></li>
@@ -118,24 +118,28 @@
   <main id="main">
     <header class="page-head wrap">
       <p class="series-line">The <em>Finding Joy</em> series</p>
-      <h1 class="page-head__title"><span class="key">news</span> &amp; updates</h1>
-      <p class="page-head__intro">Release announcements and milestones, newest first.</p>
+      <h1 class="page-head__title"><span class="key">events</span></h1>
+      <p class="page-head__intro">Readings, signings, and appearances. Nothing on the calendar just yet.</p>
     </header>
 
     <section class="section section--tight wrap">
-      <!-- News items render from data/news.js (newest first).
-           The item below is a no-JS fallback the script replaces. -->
-      <ul class="news-list" data-news>
-        <li class="news-item">
-          <div class="news-item__date"><time datetime="2026-07-30">July 30, 2026</time></div>
-          <h2 class="news-item__title">All three books are coming soon</h2>
-          <p class="news-item__body">All three books in the Finding Joy series are coming soon. Sign up for release announcements to be the first to know when they arrive.</p>
-        </li>
-      </ul>
+      <!-- Renders from data/events.js when events exist; otherwise this empty state shows. -->
+      <div data-events>
+        <div class="empty-state reveal">
+          <div class="empty-state__mark" aria-hidden="true">&#8212;</div>
+          <p class="lead" style="margin-top:1rem;">No events are scheduled yet.</p>
+          <p style="color:var(--muted);">Tour dates, launch readings, and signings will appear here as they're announced.</p>
+          <p style="margin-top:1.5rem;"><span class="badge">Coming Soon</span></p>
+        </div>
+      </div>
+    </section>
 
-      <p class="center" style="margin-top:3rem;">
-        <a class="btn btn--olive" href="index.html#newsletter-heading">Sign up for announcements</a>
-      </p>
+    <section class="band section--tight">
+      <div class="wrap">
+        <p class="band__title">be the first to <span class="key">know</span></p>
+        <p class="lead" style="margin-top:1rem;">Get release and event announcements straight to your inbox.</p>
+        <p style="margin-top:1.5rem;"><a class="btn btn--olive" href="index.html#newsletter-heading">Sign up</a></p>
+      </div>
     </section>
   </main>
 
@@ -180,7 +184,8 @@
     </div>
   </footer>
 
-  <script src="data/news.js"></script>
+  <script src="data/events.js"></script>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>

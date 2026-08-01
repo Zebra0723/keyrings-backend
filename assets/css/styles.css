@@ -952,3 +952,280 @@ p { margin: 0 0 1.1em; }
   }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   24. LONG-FORM PROSE (story, educators, contact)
+   ============================================================ */
+.prose { max-width: 42rem; margin-inline: auto; }
+.prose > * + * { margin-top: 1.2em; }
+.prose h2 {
+  font-family: var(--serif);
+  text-transform: lowercase;
+  font-size: var(--step-2);
+  color: var(--ink);
+  margin-top: 2.4rem;
+}
+.prose h2 .key { color: var(--olive); }
+.prose h3 {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: var(--track-tight);
+  font-size: var(--step--1);
+  color: var(--muted);
+  margin-top: 1.8rem;
+}
+.prose p { color: var(--ink); }
+.prose .lead-in::first-letter {
+  font-family: var(--serif);
+  font-size: 3.2em;
+  line-height: 0.8;
+  float: left;
+  color: var(--olive);
+  padding: 0.05em 0.12em 0 0;
+}
+
+/* ============================================================
+   25. THEMES / FEATURE GRID
+   ============================================================ */
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+.theme {
+  text-align: center;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--olive);
+}
+.theme__label {
+  font-family: var(--serif);
+  text-transform: lowercase;
+  font-size: var(--step-1);
+  color: var(--ink);
+}
+.theme__label .key { color: var(--olive); }
+.theme__text {
+  font-size: var(--step--1);
+  color: var(--muted);
+  margin-top: 0.5rem;
+  line-height: 1.55;
+}
+@media (max-width: 760px) { .theme-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .theme-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   26. FACTS BAND (home)
+   ============================================================ */
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 3.5rem);
+  text-align: center;
+}
+.fact__num {
+  font-family: var(--serif);
+  font-size: var(--step-3);
+  color: var(--olive);
+  line-height: 1;
+  display: block;
+}
+.fact__label {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: var(--track-tight);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   27. CHARACTERS
+   ============================================================ */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+.character {
+  border: 1px solid var(--ink-10);
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  background: var(--ivory);
+}
+.character__initial {
+  font-family: var(--serif);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--olive);
+}
+.character__name {
+  font-family: var(--serif);
+  text-transform: lowercase;
+  font-size: var(--step-1);
+  color: var(--ink);
+  margin-top: 0.4rem;
+}
+.character__role {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: var(--track-tight);
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+.character__blurb { font-size: var(--step--1); color: var(--ink); margin-top: 1rem; line-height: 1.6; }
+
+/* ============================================================
+   28. FAQ (native <details> accordion)
+   ============================================================ */
+.qa { max-width: 46rem; margin-inline: auto; }
+.qa__item { border-bottom: 1px solid var(--ink-10); }
+.qa__item[open] { background: linear-gradient(180deg, rgba(163,166,46,0.05), transparent); }
+.qa__q {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.3rem 2.5rem 1.3rem 0;
+  position: relative;
+  font-family: var(--serif);
+  font-size: var(--step-1);
+  color: var(--ink);
+}
+.qa__q::-webkit-details-marker { display: none; }
+.qa__q::after {
+  content: "+";
+  position: absolute;
+  right: 0.2rem; top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  color: var(--olive);
+  transition: transform 0.2s ease;
+}
+.qa__item[open] .qa__q::after { content: "\2013"; }
+.qa__q:hover { color: var(--olive); }
+.qa__a { padding: 0 0 1.5rem; color: var(--muted); }
+.qa__a p { margin: 0 0 0.8em; }
+
+/* ============================================================
+   29. DISCUSSION QUESTIONS (reading guide)
+   ============================================================ */
+.discussion { max-width: 44rem; margin-inline: auto; list-style: none; counter-reset: q; padding: 0; }
+.discussion li {
+  counter-increment: q;
+  position: relative;
+  padding: 1.3rem 0 1.3rem 3.2rem;
+  border-bottom: 1px solid var(--ink-10);
+  font-family: var(--serif);
+  font-size: var(--step-1);
+  color: var(--ink);
+  line-height: 1.5;
+}
+.discussion li::before {
+  content: counter(q, decimal-leading-zero);
+  position: absolute;
+  left: 0; top: 1.5rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--olive);
+}
+
+/* ============================================================
+   30. INFO / DEFINITION ROWS (educators, contact)
+   ============================================================ */
+.deflist { max-width: 44rem; margin-inline: auto; }
+.deflist__row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--ink-10);
+}
+.deflist__term {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: var(--track-tight);
+  font-size: var(--step--1);
+  color: var(--olive);
+}
+.deflist__desc { color: var(--ink); }
+.deflist__desc p { margin: 0 0 0.6em; }
+@media (max-width: 620px) {
+  .deflist__row { grid-template-columns: 1fr; gap: 0.4rem; }
+}
+
+/* ============================================================
+   31. CALLOUT BAND
+   ============================================================ */
+.band {
+  background: #f3ecdd;
+  text-align: center;
+}
+.band--ink { background: var(--ink); }
+.band--ink .section-head__title, .band--ink .band__title { color: var(--ivory); }
+.band--ink .lead, .band--ink p { color: rgba(250,247,240,0.8); }
+.band--ink .btn { color: var(--ivory); border-color: var(--ivory); }
+.band--ink .btn:hover { background: var(--ivory); color: var(--ink); }
+.band__title {
+  font-family: var(--serif);
+  text-transform: lowercase;
+  font-size: var(--step-2);
+  color: var(--ink);
+}
+.band__title .key { color: var(--olive); }
+
+/* Empty state (events) */
+.empty-state {
+  text-align: center;
+  max-width: 40ch;
+  margin-inline: auto;
+  padding-block: clamp(2rem, 6vw, 4rem);
+}
+.empty-state__mark {
+  font-family: var(--serif);
+  font-size: var(--step-3);
+  color: var(--olive);
+  line-height: 1;
+}
+
+/* ============================================================
+   32. MULTI-COLUMN FOOTER
+   ============================================================ */
+.footer__cols {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+.footer__col-title {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: var(--track-tight);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.footer__col ul { list-style: none; margin: 0; padding: 0; }
+.footer__col li { margin-bottom: 0.6rem; }
+.footer__col a {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: var(--track-tight);
+  font-size: 0.72rem;
+  color: var(--ink);
+}
+.footer__col a:hover { color: var(--olive); text-decoration: none; }
+.footer__about .footer__brand { display: inline-block; margin-bottom: 0.8rem; }
+.footer__about p {
+  font-size: var(--step--1);
+  color: var(--muted);
+  max-width: 32ch;
+  line-height: 1.6;
+}
+@media (max-width: 820px) {
+  .footer__cols { grid-template-columns: 1fr 1fr; }
+  .footer__about { grid-column: 1 / -1; }
+}
+@media (max-width: 460px) {
+  .footer__cols { grid-template-columns: 1fr; }
+}

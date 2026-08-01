@@ -226,6 +226,113 @@
     container.appendChild(frag);
   });
 
+  /* ---------- 10. Characters ------------------------------ */
+  document.querySelectorAll("[data-characters]").forEach(function (container) {
+    if (!window.CHARACTERS) return;
+    var limit = parseInt(container.getAttribute("data-limit"), 10) || window.CHARACTERS.length;
+    var frag = document.createDocumentFragment();
+    window.CHARACTERS.slice(0, limit).forEach(function (c) {
+      var card = document.createElement("article");
+      card.className = "character";
+
+      var initial = document.createElement("div");
+      initial.className = "character__initial";
+      initial.setAttribute("aria-hidden", "true");
+      initial.textContent = (c.name || "").charAt(0);
+
+      var name = document.createElement("h2");
+      name.className = "character__name";
+      name.textContent = c.name;
+
+      var role = document.createElement("p");
+      role.className = "character__role";
+      role.textContent = c.role;
+
+      var blurb = document.createElement("p");
+      blurb.className = "character__blurb";
+      blurb.textContent = c.blurb;
+
+      card.appendChild(initial);
+      card.appendChild(name);
+      card.appendChild(role);
+      card.appendChild(blurb);
+      frag.appendChild(card);
+    });
+    container.innerHTML = "";
+    container.appendChild(frag);
+  });
+
+  /* ---------- 11. FAQ (native details accordion) ---------- */
+  document.querySelectorAll("[data-faq]").forEach(function (container) {
+    if (!window.FAQ) return;
+    var frag = document.createDocumentFragment();
+    window.FAQ.forEach(function (item) {
+      var details = document.createElement("details");
+      details.className = "qa__item";
+
+      var summary = document.createElement("summary");
+      summary.className = "qa__q";
+      summary.textContent = item.q;
+      details.appendChild(summary);
+
+      var answer = document.createElement("div");
+      answer.className = "qa__a";
+      (Array.isArray(item.a) ? item.a : [item.a]).forEach(function (para) {
+        var p = document.createElement("p");
+        p.textContent = para;
+        answer.appendChild(p);
+      });
+      details.appendChild(answer);
+      frag.appendChild(details);
+    });
+    container.innerHTML = "";
+    container.appendChild(frag);
+  });
+
+  /* ---------- 12. Events ---------------------------------- */
+  document.querySelectorAll("[data-events]").forEach(function (container) {
+    if (!window.EVENTS) return;
+    if (!window.EVENTS.length) return; // keep the static empty-state markup
+    var list = document.createElement("ul");
+    list.className = "news-list";
+    window.EVENTS.forEach(function (e) {
+      var li = document.createElement("li");
+      li.className = "news-item";
+
+      var date = document.createElement("div");
+      date.className = "news-item__date";
+      var dt = document.createElement("time");
+      dt.setAttribute("datetime", e.date);
+      dt.textContent = formatDate(e.date) + (e.time ? " · " + e.time : "");
+      date.appendChild(dt);
+
+      var title = document.createElement("h2");
+      title.className = "news-item__title";
+      title.textContent = e.title;
+
+      var where = document.createElement("p");
+      where.className = "news-item__body";
+      var venue = [e.venue, e.location].filter(Boolean).join(" · ");
+      where.textContent = venue + (e.note ? " — " + e.note : "");
+
+      li.appendChild(date);
+      li.appendChild(title);
+      li.appendChild(where);
+      if (e.url) {
+        var p = document.createElement("p");
+        var a = document.createElement("a");
+        a.className = "book-card__link";
+        a.href = e.url; a.target = "_blank"; a.rel = "noopener";
+        a.textContent = "Details & tickets";
+        p.appendChild(a);
+        li.appendChild(p);
+      }
+      list.appendChild(li);
+    });
+    container.innerHTML = "";
+    container.appendChild(list);
+  });
+
   function formatDate(iso) {
     var parts = String(iso).split("-");
     if (parts.length !== 3) return iso;

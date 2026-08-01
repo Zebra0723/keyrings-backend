@@ -42,10 +42,31 @@
               <li><a href="books/home-stretch.html">Home Stretch</a></li>
             </ul>
           </li>
-          <li class="nav__item"><a class="nav__link" href="sample-chapter.html">Preview</a></li>
+          <li class="nav__item nav__item--has-menu">
+            <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">The Series</button>
+            <ul class="nav__menu">
+              <li><a href="story.html">The Story</a></li>
+              <li><a href="characters.html">Characters</a></li>
+              <li><a href="sample-chapter.html">Preview</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--has-menu">
+            <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">For Readers</button>
+            <ul class="nav__menu">
+              <li><a href="reading-guide.html">Reading Guide</a></li>
+              <li><a href="educators.html">For Educators</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
           <li class="nav__item"><a class="nav__link" href="praise.html">Praise</a></li>
-          <li class="nav__item"><a class="nav__link" href="author.html" aria-current="page">The Author</a></li>
-          <li class="nav__item"><a class="nav__link" href="news.html">News</a></li>
+          <li class="nav__item"><a class="nav__link" href="author.html" aria-current="page">Author</a></li>
+          <li class="nav__item nav__item--has-menu">
+            <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">News</button>
+            <ul class="nav__menu">
+              <li><a href="news.html">Latest News</a></li>
+              <li><a href="events.html">Events</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <button type="button" class="nav__toggle" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
@@ -65,10 +86,32 @@
           <li><a href="books/home-stretch.html">Home Stretch</a></li>
         </ul>
       </li>
-      <li><a class="mobile-menu__link" href="sample-chapter.html">Preview</a></li>
+      <li>
+        <span class="mobile-menu__link" aria-hidden="true">The Series</span>
+        <ul class="mobile-menu__sub">
+          <li><a href="story.html">The Story</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="sample-chapter.html">Preview</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="mobile-menu__link" aria-hidden="true">For Readers</span>
+        <ul class="mobile-menu__sub">
+          <li><a href="reading-guide.html">Reading Guide</a></li>
+          <li><a href="educators.html">For Educators</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </li>
       <li><a class="mobile-menu__link" href="praise.html">Praise</a></li>
-      <li><a class="mobile-menu__link" href="author.html">The Author</a></li>
-      <li><a class="mobile-menu__link" href="news.html">News</a></li>
+      <li><a class="mobile-menu__link" href="author.html" aria-current="page">Author</a></li>
+      <li>
+        <span class="mobile-menu__link" aria-hidden="true">News</span>
+        <ul class="mobile-menu__sub">
+          <li><a href="news.html">Latest News</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </li>
+      <li><a class="mobile-menu__link" href="contact.html">Contact</a></li>
     </ul>
   </div>
 
@@ -118,17 +161,42 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer__inner">
-      <a class="footer__brand" href="index.html">finding <span class="key">joy</span></a>
-      <ul class="footer__nav">
-        <li><a href="books/finding-joy.html">Finding Joy</a></li>
-        <li><a href="books/recovering-connection.html">Recovering Connection</a></li>
-        <li><a href="books/home-stretch.html">Home Stretch</a></li>
-        <li><a href="sample-chapter.html">Preview</a></li>
-        <li><a href="praise.html">Praise</a></li>
-        <li><a href="author.html">The Author</a></li>
-        <li><a href="news.html">News</a></li>
-      </ul>
+    <div class="wrap">
+      <div class="footer__cols">
+        <div class="footer__col footer__about">
+          <a class="footer__brand" href="index.html">finding <span class="key">joy</span></a>
+          <p>A young-adult trilogy about courage, family, exile, and the sport that becomes both weapon and refuge.</p>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">The Books</p>
+          <ul>
+          <li><a href="books/finding-joy.html">Finding Joy</a></li>
+          <li><a href="books/recovering-connection.html">Recovering Connection</a></li>
+          <li><a href="books/home-stretch.html">Home Stretch</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Explore</p>
+          <ul>
+          <li><a href="story.html">The Story</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="sample-chapter.html">Preview</a></li>
+          <li><a href="reading-guide.html">Reading Guide</a></li>
+          <li><a href="educators.html">For Educators</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Connect</p>
+          <ul>
+          <li><a href="praise.html">Praise</a></li>
+          <li><a href="author.html">The Author</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
       <p class="footer__meta">The <em>Finding Joy</em> series by Arjun Jain · All three books coming soon.</p>
     </div>
   </footer>

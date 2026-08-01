@@ -14,10 +14,17 @@ and all purchase links are inert until you activate them (see below).
 ```
 .
 ├── index.html                     # Home
-├── sample-chapter.html            # Book 1 sample chapter (long-form reader)
-├── praise.html                    # Endorsements
+├── story.html                     # The Story — the world & themes
+├── characters.html                # Characters (from data/characters.js)
+├── sample-chapter.html            # Book 1 sample chapter (the "Preview" page)
+├── reading-guide.html             # Book-club / classroom discussion guide
+├── educators.html                 # For Educators — teaching resources
+├── faq.html                       # FAQ (from data/faq.js)
+├── praise.html                    # Endorsements (from data/endorsements.js)
 ├── author.html                    # About the author
-├── news.html                      # Reverse-chronological updates
+├── news.html                      # Reverse-chronological updates (from data/news.js)
+├── events.html                    # Events / appearances (from data/events.js)
+├── contact.html                   # Press, rights, schools, reader mail
 ├── books/
 │   ├── finding-joy.html           # Book 1
 │   ├── recovering-connection.html # Book 2
@@ -30,13 +37,22 @@ and all purchase links are inert until you activate them (see below).
 ├── data/
 │   ├── retailers.js               # Purchase links (single source of truth)
 │   ├── endorsements.js            # Praise quotes
-│   └── news.js                    # News entries
+│   ├── characters.js              # Character guide entries
+│   ├── faq.js                     # FAQ questions & answers
+│   ├── news.js                    # News entries
+│   └── events.js                  # Events (empty = "nothing scheduled" state)
 ├── favicon.svg                    # Lowercase olive "j" from the cover typography
 └── README.md
 ```
 
 The design system (palette, type roles, the thin cover-style divider) is derived directly
 from the book covers and defined as CSS custom properties at the top of `assets/css/styles.css`.
+
+Every page shares one nav, mobile menu, and footer. They're plain static HTML in each file
+(good for SEO and no-JS); the nav is grouped into dropdowns: **The Books**, **The Series**
+(Story / Characters / Preview), **For Readers** (Reading Guide / For Educators / FAQ), plus
+Praise, Author, and **News** (Latest News / Events). If you add or rename a page, update the
+nav/footer blocks in each HTML file to match.
 
 ---
 
@@ -113,6 +129,21 @@ Edit **`data/news.js`** and add an object to the **top** of the array (newest fi
 ```
 
 Dates are formatted for display automatically.
+
+---
+
+## How to edit characters, FAQ, and events
+
+All three are single-file data sources rendered by `assets/js/main.js`; each file has
+commented instructions at the top. No HTML edits are needed.
+
+- **Characters** — `data/characters.js`. Each entry is `{ name, role, blurb }`. Array order is
+  display order; the first letter of `name` becomes the large olive initial on the card.
+- **FAQ** — `data/faq.js`. Each entry is `{ q, a }` where `a` is an **array of paragraphs**.
+  Rendered as a native `<details>` accordion (works without JS on the fallback items too).
+- **Events** — `data/events.js`. The array is **empty by default**, which shows a friendly
+  "nothing scheduled" state. Add `{ date, time, title, venue, location, url, note }` objects to
+  populate the Events page (soonest first).
 
 ---
 

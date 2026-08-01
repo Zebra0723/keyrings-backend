@@ -39,7 +39,6 @@
   <header class="nav" data-nav>
     <div class="wrap nav__inner">
       <a class="nav__brand" href="index.html" aria-label="Finding Joy — home">Finding Joy</a>
-
       <nav aria-label="Primary">
         <ul class="nav__list">
           <li class="nav__item nav__item--has-menu">
@@ -50,13 +49,33 @@
               <li><a href="books/home-stretch.html">Home Stretch</a></li>
             </ul>
           </li>
-          <li class="nav__item"><a class="nav__link" href="sample-chapter.html">Preview</a></li>
+          <li class="nav__item nav__item--has-menu">
+            <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">The Series</button>
+            <ul class="nav__menu">
+              <li><a href="story.html">The Story</a></li>
+              <li><a href="characters.html">Characters</a></li>
+              <li><a href="sample-chapter.html">Preview</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--has-menu">
+            <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">For Readers</button>
+            <ul class="nav__menu">
+              <li><a href="reading-guide.html">Reading Guide</a></li>
+              <li><a href="educators.html">For Educators</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
           <li class="nav__item"><a class="nav__link" href="praise.html">Praise</a></li>
-          <li class="nav__item"><a class="nav__link" href="author.html">The Author</a></li>
-          <li class="nav__item"><a class="nav__link" href="news.html">News</a></li>
+          <li class="nav__item"><a class="nav__link" href="author.html">Author</a></li>
+          <li class="nav__item nav__item--has-menu">
+            <button type="button" class="nav__link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">News</button>
+            <ul class="nav__menu">
+              <li><a href="news.html">Latest News</a></li>
+              <li><a href="events.html">Events</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
-
       <button type="button" class="nav__toggle" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -75,10 +94,32 @@
           <li><a href="books/home-stretch.html">Home Stretch</a></li>
         </ul>
       </li>
-      <li><a class="mobile-menu__link" href="sample-chapter.html">Preview</a></li>
+      <li>
+        <span class="mobile-menu__link" aria-hidden="true">The Series</span>
+        <ul class="mobile-menu__sub">
+          <li><a href="story.html">The Story</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="sample-chapter.html">Preview</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="mobile-menu__link" aria-hidden="true">For Readers</span>
+        <ul class="mobile-menu__sub">
+          <li><a href="reading-guide.html">Reading Guide</a></li>
+          <li><a href="educators.html">For Educators</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </li>
       <li><a class="mobile-menu__link" href="praise.html">Praise</a></li>
-      <li><a class="mobile-menu__link" href="author.html">The Author</a></li>
-      <li><a class="mobile-menu__link" href="news.html">News</a></li>
+      <li><a class="mobile-menu__link" href="author.html">Author</a></li>
+      <li>
+        <span class="mobile-menu__link" aria-hidden="true">News</span>
+        <ul class="mobile-menu__sub">
+          <li><a href="news.html">Latest News</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </li>
+      <li><a class="mobile-menu__link" href="contact.html">Contact</a></li>
     </ul>
   </div>
 
@@ -107,6 +148,15 @@
         and one battered racket toward the professional stage. Told in the first person, it is a
         story of courage, exile, and the sport that becomes both weapon and refuge.
       </p>
+    </section>
+
+    <!-- ============ FACTS ============ -->
+    <section class="section--tight band">
+      <div class="wrap facts">
+        <div class="reveal"><span class="fact__num">3</span><span class="fact__label">Books in the series</span></div>
+        <div class="reveal"><span class="fact__num">1</span><span class="fact__label">Story, told in first person</span></div>
+        <div class="reveal"><span class="fact__num">Soon</span><span class="fact__label">To bookshelves everywhere</span></div>
+      </div>
     </section>
 
     <!-- ============ BOOKS ROW ============ -->
@@ -151,6 +201,45 @@
           <p class="book-card__tagline">Two girls. One sport. The <span class="key">last</span> set.</p>
           <a class="book-card__link" href="books/home-stretch.html">Explore Book 3</a>
         </article>
+      </div>
+    </section>
+
+    <!-- ============ THEMES ============ -->
+    <section class="section wrap" aria-labelledby="themes-heading">
+      <div class="section-head">
+        <p class="series-line reveal">What it's about</p>
+        <h2 class="section-head__title reveal" id="themes-heading">courage, family, exile, <span class="key">belonging</span></h2>
+      </div>
+      <div class="theme-grid">
+        <div class="theme reveal">
+          <p class="theme__label">courage</p>
+          <p class="theme__text">A forbidden game, played anyway — and the cost of wanting something that badly.</p>
+        </div>
+        <div class="theme reveal">
+          <p class="theme__label">family</p>
+          <p class="theme__text">A mother's medallion, a sister's voice, a brother asleep on the couch — home carried in small things.</p>
+        </div>
+        <div class="theme reveal">
+          <p class="theme__label">exile</p>
+          <p class="theme__text">Borders crossed and left behind, and the ache of belonging to two places and neither.</p>
+        </div>
+        <div class="theme reveal">
+          <p class="theme__label"><span class="key">belonging</span></p>
+          <p class="theme__text">A sport that becomes a home — both weapon and refuge on the road to the professional stage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE WORLD TEASER ============ -->
+    <section class="band band--ink section--tight">
+      <div class="wrap">
+        <p class="series-line reveal" style="color:var(--warm);">The world of the series</p>
+        <p class="band__title reveal" style="margin-top:0.6rem;">from a hidden court in kabul to center <span class="key">court</span></p>
+        <p class="lead reveal" style="margin-top:1rem;">Meet Laleh, follow her journey, and step into the story.</p>
+        <p class="reveal" style="margin-top:1.6rem;">
+          <a class="btn" href="story.html">Read the story</a>
+          <a class="btn" href="characters.html" style="margin-left:0.5rem;">Meet the characters</a>
+        </p>
       </div>
     </section>
 
@@ -216,17 +305,42 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="wrap footer__inner">
-      <a class="footer__brand" href="index.html">finding <span class="key">joy</span></a>
-      <ul class="footer__nav">
-        <li><a href="books/finding-joy.html">Finding Joy</a></li>
-        <li><a href="books/recovering-connection.html">Recovering Connection</a></li>
-        <li><a href="books/home-stretch.html">Home Stretch</a></li>
-        <li><a href="sample-chapter.html">Preview</a></li>
-        <li><a href="praise.html">Praise</a></li>
-        <li><a href="author.html">The Author</a></li>
-        <li><a href="news.html">News</a></li>
-      </ul>
+    <div class="wrap">
+      <div class="footer__cols">
+        <div class="footer__col footer__about">
+          <a class="footer__brand" href="index.html">finding <span class="key">joy</span></a>
+          <p>A young-adult trilogy about courage, family, exile, and the sport that becomes both weapon and refuge.</p>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">The Books</p>
+          <ul>
+          <li><a href="books/finding-joy.html">Finding Joy</a></li>
+          <li><a href="books/recovering-connection.html">Recovering Connection</a></li>
+          <li><a href="books/home-stretch.html">Home Stretch</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Explore</p>
+          <ul>
+          <li><a href="story.html">The Story</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="sample-chapter.html">Preview</a></li>
+          <li><a href="reading-guide.html">Reading Guide</a></li>
+          <li><a href="educators.html">For Educators</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Connect</p>
+          <ul>
+          <li><a href="praise.html">Praise</a></li>
+          <li><a href="author.html">The Author</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
       <p class="footer__meta">The <em>Finding Joy</em> series by Arjun Jain · All three books coming soon.</p>
     </div>
   </footer>
